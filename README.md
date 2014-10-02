@@ -4,6 +4,8 @@ GitHub has a feature where commits can be amended with older dates.
 
 For the lols (and I was bored), I decided to create a program that would fill GitHub's contributions calendar.
 
+![faked contributions calendar](http://www.justicesuh.com/images/fc.png)
+
 ###Instructions
 Create a GitHub repository to hold the fake commits
 
