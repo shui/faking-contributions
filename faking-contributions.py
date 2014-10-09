@@ -11,8 +11,8 @@ if len(sys.argv) == 5:
 	template = sys.argv[4]
 	hasTemplate = True
 
-call('git init')
-call('git remote add origin https://' + username + ':' + password + '@github.com/' + username + '/' + repository + '.git')
+call('git init', shell=True)
+call('git remote add origin https://' + username + ':' + password + '@github.com/' + username + '/' + repository + '.git', shell=True)
 
 time = '12:00:00'
 offset = '-0500'
@@ -32,9 +32,9 @@ else:
 			readme = open(filename, 'w+')
 			readme.write(complete)
 			# message = complete
-			call('git add ' + filename)
-			call('git commit --date="' + complete + '" -m "' + message + '"', stdout=open(os.devnull, 'w'))
+			call('git add ' + filename, shell=True)
+			call('git commit --date="' + complete + '" -m "' + message + '"', stdout=open(os.devnull, 'w'), shell=True)
 			print 'Committing: ' + complete
-		call('git push origin master')
+		call('git push origin master', shell=True)
 		current = current + timedelta(days=1)
 readme.close()
