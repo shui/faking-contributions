@@ -24,11 +24,31 @@ message = 'test'
 half = ' ' + time + ' ' + offset
 current = date.today() - timedelta(days=365)
 if hasTemplate:
-	print 'Templating not yet supported'
+	while current.weekday() != 6:
+		current = current + timedelta(days=1)
+	rowCounter = current
+	tFile = open(template)
+	tLines = tFile.readlines()
+	tFile.close()
+	for i in range(0, 7):
+		for k in range(0, len(tLines[i]) - 1):
+			for n in range(0, (maximum / 5 * (int(tLines[i][k]) - 1)) + randint(0, maximum / 5)):
+				if int(tLines[i][k]) == 0:
+					break
+				complete = str(current) + half + ':' + str(n + 1)
+				readme = open(filename, 'w+')
+				readme.write(complete)
+				call('git add ' + filename, shell=True)
+				call('git commit --date="' + complete + '" -m "' + message + '"', stdout=open(os.devnull, 'w'), shell=True)
+				print 'Committing: ' + complete
+			call('git push origin master', shell=True)
+			current = current + timedelta(days=7)
+		current = rowCounter + timedelta(days=1)
+		rowCounter = rowCounter + timedelta(days=1)
 else:
 	for i in range(0, 365):
 		for k in range(0, randint(minimum, maximum)):
-			complete = str(current) + half + ':' + str(k)
+			complete = str(current) + half + ':' + str(k + 1)
 			readme = open(filename, 'w+')
 			readme.write(complete)
 			# message = complete
