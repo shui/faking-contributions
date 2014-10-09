@@ -23,5 +23,22 @@ example:
 
     python faking-contributions.py justicesuh hunter2 fake-commits
     
-###Todo
-Allow templating (pretty pictures)
+###Creating a word template
+    
+![oh hai](http://www.justicesuh.com/images/ohhai.png)
+
+    python generator.py "the string" filename
+
+example:
+
+    python generator.py "oh hai" templates/ohhai
+
+###Running with a template
+
+![faked calendar with template](http://justicesuh.com/images/fc-template.png)
+
+    python faking-contributions.py username password repository template
+    
+example:
+
+    python faking-contributions.py justicesuh hunter2 fake-commits templates/ohhai
