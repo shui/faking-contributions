@@ -4,7 +4,7 @@ Git has a feature where commits can be amended with older dates.
 
 For the lols (and I was bored), I decided to create a program that would fill GitHub's contributions calendar.
 
-![faked contributions calendar](http://www.justicesuh.com/images/fc.png)
+![faked contributions calendar](http://imgur.com/5vkUDzh)
 
 ###Instructions
 Make sure you have Python 2.7 installed
@@ -35,7 +35,7 @@ example:
 
 ###Running with a template
 
-![faked calendar with template](http://justicesuh.com/images/fc-template.png)
+![faked calendar with template](http://imgur.com/9ZFdqpx)
 
     python faking-contributions.py username password repository template
     
