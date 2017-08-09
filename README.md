@@ -1,4 +1,4 @@
-##Faking Contributions
+## Faking Contributions
 
 Git has a feature where commits can be amended with older dates.
 
@@ -6,7 +6,7 @@ For the lols (and I was bored), I decided to create a program that would fill Gi
 
 ![faked contributions calendar](http://i.imgur.com/5vkUDzh.png)
 
-###Instructions
+### Instructions
 Make sure you have Python 2.7 installed
 
 Create a GitHub repository to hold the fake commits
@@ -23,7 +23,7 @@ example:
 
     python faking-contributions.py justicesuh hunter2 fake-commits
     
-###Creating a word template
+### Creating a word template
     
 ![oh hai](http://www.justicesuh.com/images/ohhai.png)
 
@@ -33,7 +33,7 @@ example:
 
     python generator.py "oh hai" templates/ohhai
 
-###Running with a template
+### Running with a template
 
 ![faked calendar with template](http://i.imgur.com/9ZFdqpx.png)
 
