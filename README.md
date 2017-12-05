@@ -7,7 +7,7 @@ For the lols (and I was bored), I decided to create a program that would fill Gi
 ![faked contributions calendar](http://i.imgur.com/5vkUDzh.png)
 
 ### Instructions
-Make sure you have Python 2.7 installed
+Make sure you have Python 3+ installed
 
 Create a GitHub repository to hold the fake commits
 
@@ -17,28 +17,28 @@ Delete the .git folder (make sure the directory doesn't have a .git folder)
 
 Then run
     
-    python faking-contributions.py username password repository
+    python3 faking-contributions.py username password repository
 
 example:
 
-    python faking-contributions.py justicesuh hunter2 fake-commits
+    python3 faking-contributions.py justicesuh hunter2 fake-commits
     
 ### Creating a word template
     
 ![oh hai](http://www.justicesuh.com/images/ohhai.png)
 
-    python generator.py "the string" filename
+    python3 generator.py "the string" filename
 
 example:
 
-    python generator.py "oh hai" templates/ohhai
+    python3 generator.py "oh hai" templates/ohhai
 
 ### Running with a template
 
 ![faked calendar with template](http://i.imgur.com/9ZFdqpx.png)
 
-    python faking-contributions.py username password repository template
+    python3 faking-contributions.py username password repository template
     
 example:
 
-    python faking-contributions.py justicesuh hunter2 fake-commits templates/ohhai
+    python3 faking-contributions.py justicesuh hunter2 fake-commits templates/ohhai
