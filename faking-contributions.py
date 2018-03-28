@@ -32,7 +32,7 @@ if hasTemplate:
 	tFile.close()
 	for i in range(0, 7):
 		for k in range(0, len(tLines[i]) - 1):
-			for n in range(0, (maximum / 5 * (int(tLines[i][k]) - 1)) + randint(0, maximum / 5)):
+			for n in range(0, int(maximum / 5 * (int(tLines[i][k]) - 1)) + randint(0, maximum / 5)):
 				if int(tLines[i][k]) == 0:
 					break
 				complete = str(current) + half + ':' + str(n + 1)
