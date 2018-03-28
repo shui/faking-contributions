@@ -66,14 +66,14 @@ for i in range(0, 7):
 				break
 			if string[k] == ' ':
 				continue
-			line += str(letters[string[k]][i][n])	
+			line += str(letters[string[k]][i][n])
 		if len(line) < 49:
 			line += '00'
 		elif len(line) == 50:
 			line += '0'
 	for n in range(len(line), 51):
 		line += '0'
-	print line
+	print(line)
 	generated = open(filename, 'a+')
 	generated.write(line)
 	if i != 6:
