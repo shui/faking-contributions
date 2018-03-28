@@ -41,7 +41,6 @@ if hasTemplate:
 				call('git add ' + filename, shell=True)
 				call('git commit --date="' + complete + '" -m "' + message + '"', stdout=open(os.devnull, 'w'), shell=True)
 				print('Committing: ' + complete)
-			call('git push origin master', shell=True)
 			current = current + timedelta(days=7)
 		current = rowCounter + timedelta(days=1)
 		rowCounter = rowCounter + timedelta(days=1)
@@ -55,6 +54,7 @@ else:
 			call('git add ' + filename, shell=True)
 			call('git commit --date="' + complete + '" -m "' + message + '"', stdout=open(os.devnull, 'w'), shell=True)
 			print('Committing: ' + complete)
-		call('git push origin master', shell=True)
 		current = current + timedelta(days=1)
 readme.close()
+
+call('git push -f origin master', shell=True)
